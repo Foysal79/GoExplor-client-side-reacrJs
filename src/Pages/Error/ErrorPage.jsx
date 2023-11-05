@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../../Share/Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import Lottie from "lottie-react";
-import loginAnimition from"../../assets/404.json"
+import errorAnimition from"../../assets/404.json"
 const ErrorPage = () => {
     return (
         <div>
@@ -10,7 +10,7 @@ const ErrorPage = () => {
 
             <div className='flex justify-center' >
                 {/* <img src="https://i.ibb.co/wc63gst/error3.jpg" alt="" /> */}
-                <Lottie animationData={loginAnimition} ></Lottie>
+                <Lottie animationData={errorAnimition} ></Lottie>
                 
             </div>
             <div className='flex justify-center' >
