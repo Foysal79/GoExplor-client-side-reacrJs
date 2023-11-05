@@ -1,5 +1,5 @@
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
 
   const navlink1 = <>
@@ -15,7 +15,7 @@ const Navbar = () => {
   
   </>
     return (
-        <div className="navbar  md:px-10 lg:px-20   ">
+        <div className="navbar   md:px-10 lg:px-20  py-4 ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <a className=" text-4xl font-bold ">Go<span className="text-[#0DCDC2]" >Explore</span> </a>
+    <Link to='/' ><a className=" btn text-4xl font-bold ">Go<span className="text-[#0DCDC2]" >Explore</span> </a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -37,7 +37,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <Link to='/login' ><a className="btn text-xl ">LogIn</a></Link>
   </div>
 </div>
     );
