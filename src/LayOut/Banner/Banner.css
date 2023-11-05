@@ -1,0 +1,9 @@
+.background1 {
+  background-image: linear-gradient(to right, #151515, rgba(21, 21, 21, 0)), url('https://i.ibb.co/yFzZ2md/8.jpg');
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 100vh;
+
+    
+  }
