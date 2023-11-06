@@ -4,7 +4,7 @@ const Navbar = () => {
 
   const navlink1 = <>
   <li><NavLink className="mr-4 md:text-xl" to='/' >Home</NavLink></li>
-  <li><NavLink className="mr-4 md:text-xl " to='/services' >Services</NavLink></li>
+  <li><NavLink className="mr-4 md:text-xl " to='/allServices' >Services</NavLink></li>
   
         <li> <NavLink className="mr-4 md:text-xl " to='/dashboard' >
         Dashboard
