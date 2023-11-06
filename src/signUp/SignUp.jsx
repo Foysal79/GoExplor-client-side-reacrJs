@@ -1,11 +1,50 @@
-import React from 'react';
+
 import Lottie from "lottie-react";
 import loginAnimition from"../../src/assets/RegistrationsAnimation.json"
 import Navbar from '../Share/Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
+// import { getAuth, updateProfile } from 'firebase/auth';
+import toast, { Toaster } from 'react-hot-toast';
+import { useContext } from "react";
+
+// import app from '../Firebase/Firebase.config';
+
+
+
+
+
 const SignUp = () => {
+
+	const {createUser} = useContext(AuthContext);
+
+	const handelRegistration = e => {
+		e.preventDefault();
+		const name = e.target.name.value;
+        const img = e.target.img.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value; 
+
+		console.log(name, img, email, password);
+		createUser(email, password)
+		.then(result => {
+           toast.success('Wow Successfully Registration')
+            console.log(result.user);
+			
+           
+            
+        })
+        .catch(error => {
+            console.log(error.message);
+            toast.error(error.message)
+  
+            
+          })
+
+	}
     return (
         <div className='mb-28' >
+			<Toaster/>
              <Navbar></Navbar>
             {/* SignUp Session */}
             <div className=' w-10/12 mx-auto lg:flex lg:justify-center lg:items-center lg:mt-5 ' >
@@ -21,30 +60,38 @@ const SignUp = () => {
 	
 	
 	
-	<form noValidate="" action="" className="space-y-8">
+	<form onSubmit={handelRegistration}  className="space-y-8">
 		<div className="space-y-4">
+			{/* name */}
 			<div className="space-y-2">
 				<label htmlFor="name" className="block text-sm">Your Name</label>
-				<input type="text" name="name" id="name" placeholder="Foysal Nur Ontor " className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400" />
+				<input type="text" name="name" id="name" placeholder="Foysal Nur Ontor " className="w-full px-3 py-2 border rounded-md border-gray-700  text-black focus:border-violet-400" />
 			</div>
+			{/* img */}
 			<div className="space-y-2">
 				<label htmlFor="img" className="block text-sm">Image Url</label>
-				<input type="text" name="img" id="img" placeholder="www.yourimg.com" className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400" />
+				<input type="text" name="img" id="img" placeholder="www.yourimg.com" className="w-full px-3 py-2 border rounded-md border-gray-700  text-black " />
 			</div>
+			{/* email */}
 			<div className="space-y-2">
 				<label htmlFor="email" className="block text-sm">Email address</label>
-				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400" />
+				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md border-gray-700  text-black " />
 			</div>
+			{/* password */}
 			<div className="space-y-2">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-sm">Password</label>
 					
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700   focus:border-violet-400" />
+				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 text-black   " />
 			</div>
 		</div>
+		{/* button */}
 		<button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-green-400 text-gray-900">Registration</button>
 	</form>
+
+
+
     <div className="flex items-center w-full my-4">
 		<hr className="w-full text-black" /> 
 		<p className="px-3 text-black">OR</p>
