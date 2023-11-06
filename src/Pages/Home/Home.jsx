@@ -4,6 +4,8 @@ import PopularServices from "../../LayOut/PopularServices/PopularServices";
 import Testimonial from "../../LayOut/Testimonial/Testimonial";
 import WhyTravelWithUs from "../../LayOut/WhyTravelWithUs/WhyTravelWithUs";
 import PhotoTravelers from "../../LayOut/PhotoTeavellers/PhotoTravelers";
+import Partners from "../../LayOut/Partners/Partners";
+
 
 
 const Home = () => {
@@ -16,7 +18,9 @@ const Home = () => {
               <Link to='/allServices' > <button className="btn" >More Destination</button> </Link>
               </div>
               <PhotoTravelers></PhotoTravelers>
+              <Partners></Partners>
               <Testimonial></Testimonial>
+              
         </div>
     );
 };
