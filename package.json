@@ -10,19 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "flowbite": "^2.0.0",
     "leaflet": "^1.9.4",
     "localforage": "^1.10.0",
+    "lodash": "^4.17.21",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",
     "preline": "^1.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.2",
     "react-leaflet": "^4.2.1",
     "react-marquee-slider": "^1.1.5",
     "react-router-dom": "^6.18.0",
     "react-simple-typewriter": "^5.0.1",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

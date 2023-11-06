@@ -5,7 +5,7 @@ const Testimonial = () => {
         <div className='w-8/12 mx-auto space-y-20 mt-36'  >
 			<div className="text-center space-y-5">
 		<p>CLIENTS REVIEWS</p>
-		<h1 className="text-5xl font-bold  text-center">What our customers are saying about us</h1>
+		<h1 className="text-5xl font-bold   text-center">What our customers are saying about us</h1>
 		<p className='w-6/12 mx-auto text-sm' >Our customers are raving about their incredible experiences with us!</p>
 </div>
 

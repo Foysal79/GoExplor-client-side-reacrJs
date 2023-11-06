@@ -5,7 +5,7 @@ const PhotoTravelers = () => {
         <div>
             <div className='text-center space-y-6 ' >
                 <p className='text-sm' >PHOTO GALLERY</p>
-            <h1 className=' text-5xl font-bold' >PHOTOS FROM TRAVELERS</h1>
+            <h1 className=' text-5xl font-bold ' >PHOTOS FROM TRAVELERS</h1>
             <p className='text-sm' >Discover the world through my lens on GoEXplor - Where Every Click is a Journey.</p>
             </div>
 

@@ -5,7 +5,7 @@ const WhyTravelWithUs = () => {
 
       <div>
         <h1 className="text-center lg:hidden text-4xl font-bold mt-16 ">Why Travel with Go<span className="text-[#0DCDC2]">EXPLORE</span> ?</h1>
-        <div className="lg:absolute lg:right-0 lg:left-0 lg:-bottom-48 grid  md:grid-cols-2 gap-10 mt-14 lg:mt-0 lg:grid-cols-4 pl-3 md:pl-0  w-8/12 mx-auto  " >
+        <div className="lg:absolute lg:right-0 lg:left-0 lg:-bottom-48 grid  md:grid-cols-2 gap-10 mt-14 lg:mt-0 lg:grid-cols-4 pl-2 md:pl  w-8/12 mx-auto  " >
           
 <div className="w-64 py-6  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-b-8 border-b-[#0DCDC2]  ">
     <a href="#">
