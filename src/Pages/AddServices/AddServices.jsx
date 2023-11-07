@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import axios from "axios";
 
 
 const AddServices = () => {
@@ -15,9 +16,26 @@ const AddServices = () => {
         const Price = form.Price.value;
         const description = form.description.value;
         const serviceArea = form.serviceArea.value;
+        const ServiceProviderImage = form.ServiceProviderImage.value;
+
+        
+
+		const services = {
+			serviceName,
+			pictureURL,
+			yourName,
+			yourEmail,
+			Price,
+			description,
+			serviceArea,
+			ServiceProviderImage
+		}
+		
+		axios.post('http://localhost:5000/allServices', services )
+		.then(res => console.log(res.data))
 
 
-        console.log(serviceName, pictureURL, yourName,yourEmail, Price, description, serviceArea);
+		console.log(services);
 
 
 
@@ -54,6 +72,10 @@ const AddServices = () => {
                 <div className="col-span-full sm:col-span-3">
 					<label htmlFor="Price" className="text-sm">Price</label>
 					<input id="Price" type="text" name="Price" placeholder="Price"  className="w-full rounded-md focus:ring focus:ri focus:ri dark:dark:border-gray-700 dark:dark:text-gray-900" />
+				</div>
+                <div className="col-span-full sm:col-span-3">
+					<label htmlFor="ServiceProviderImage" className="text-sm">Service provider image</label>
+					<input id="ServiceProviderImage" disabled defaultValue={user?.photoURL} type="text" name="ServiceProviderImage" placeholder="Service provider image"  className="w-full rounded-md focus:ring focus:ri focus:ri dark:dark:border-gray-700 dark:dark:text-gray-900" />
 				</div>
 				<div className="col-span-full">
 					<label htmlFor="Description" className="text-sm">Description</label>
