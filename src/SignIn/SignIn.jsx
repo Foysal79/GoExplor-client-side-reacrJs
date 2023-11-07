@@ -5,6 +5,7 @@ import Navbar from '../Share/Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import Footer from '../LayOut/Footer/Footer';
 
 const SignIn = () => {
 
@@ -19,7 +20,7 @@ const SignIn = () => {
 		LogIn(email, password)
 		.then(result => {
 			console.log(result.user)
-          toast.success('Successfully Login !')
+          toast.success('Successfully Login !');
           navigate(location?.state ? location.state : '/')
 		})
 		.catch(error => {
@@ -27,14 +28,14 @@ const SignIn = () => {
 			if (error.code === 'auth/invalid-email')
 			{
 			toast.error('Invalid email format. Please enter a valid email address.')
-			console.log('Invalid email format. Please enter a valid email address.');
+			
 			}
 			else if (error.code === 'auth/wrong-password') {
 			toast.error('Invalid password. Please check your password and try again.');
-			console.log('Invalid password. Please check your password and try again.')
+			
 			} else {
 			toast.error(error.code);
-			console.log(error.code)
+			
 			}
 		} );
 
@@ -93,6 +94,7 @@ const SignIn = () => {
                </div>
             </div>
         </div>
+		<Footer></Footer>
         </div>
     );
 };

@@ -8,9 +8,9 @@ const Banner = () => {
         deleteSpeed : 40,
     })
     return (
-        <div className="relative w-full background1  " >
+        <div className=" w-full  background1  " >
             {/* <img className="w-full h-[100vh] " src="https://i.ibb.co/yFzZ2md/8.jpg" alt="" /> */}
-            <div className="absolute  h-full flex items-center " >
+            <div className="  h-full flex items-center " >
             <div className='text-white space-y-4  lg:space-y-8 items-center pl-10 lg:pl-28  '>
                 <h1 className='lg:text-3xl font-semibold' >What we offer? <span className='bg-[#0DCDC2] text-black px-6' > {typeEffect} </span> </h1>
         <h2 className=' text-4xl lg:text-7xl font-bold  lg:w-2/3'> Dream Vacation with <span>Go<span className='text-[#0DCDC2]'>EXPLOR</span> </span> </h2>

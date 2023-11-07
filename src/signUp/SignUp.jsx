@@ -7,6 +7,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 // import { getAuth, updateProfile } from 'firebase/auth';
 import toast, { Toaster } from 'react-hot-toast';
 import { useContext } from "react";
+import Footer from "../LayOut/Footer/Footer";
 
 // import app from '../Firebase/Firebase.config';
 
@@ -43,7 +44,7 @@ const SignUp = () => {
 
 	}
     return (
-        <div className='mb-28' >
+        <div className='' >
 			<Toaster/>
              <Navbar></Navbar>
             {/* SignUp Session */}
@@ -114,6 +115,7 @@ const SignUp = () => {
                </div>
             </div>
         </div>
+		<Footer></Footer>
             
         </div>
     );
