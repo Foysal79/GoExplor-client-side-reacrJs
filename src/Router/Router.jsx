@@ -9,6 +9,7 @@ import AllServices from "../Pages/AllServices/AllServices";
 import AddServices from "../Pages/AddServices/AddServices";
 import UpdateServices from "../Pages/UpdateServices/UpdateServices";
 import PrivetRouter from "./PrivetRouter";
+import PopularServices from "../LayOut/PopularServices/PopularServices";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,12 @@ const router = createBrowserRouter([
         {
           path: '/',
           element : <Home></Home>
+        },
+        {
+           path : '/popularDestination',
+           element : <PopularServices></PopularServices>,
+           loader : () => fetch("http://localhost:5000/allServices")
+           
         },
         {
           path : '/allServices',

@@ -14,8 +14,8 @@ const Home = () => {
             <Banner></Banner>
             <WhyTravelWithUs></WhyTravelWithUs>
               <PopularServices></PopularServices>
-              <div className="text-center my-16" >
-              <Link to='/allServices' > <button className="btn" >More Destination</button> </Link>
+              <div className="text-center my-16 " >
+              <Link to='/allServices' className="" > <button className="btn bg-[#0DCDC2]  text-black lg:text-2xl  hover:bg-[#0DCDC2]  lg:px-52 " >More Destination</button> </Link>
               </div>
               <PhotoTravelers></PhotoTravelers>
               <Partners></Partners>
