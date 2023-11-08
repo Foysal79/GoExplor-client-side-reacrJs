@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const AddServices = () => {
@@ -32,7 +33,14 @@ const AddServices = () => {
 		}
 		
 		axios.post('http://localhost:5000/allServices', services )
-		.then(res => console.log(res.data))
+		.then(res => {
+			Swal.fire({
+                title: "Your Service Add",
+                text: "Wow",
+                icon: "success",
+                confirmButtonText : 'ok',
+            })
+		})
 
 
 		console.log(services);

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Banner.css'
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 const Banner = () => {
@@ -16,7 +17,8 @@ const Banner = () => {
         <h2 className=' text-4xl lg:text-7xl font-bold  lg:w-2/3'> Dream Vacation with <span>Go<span className='text-[#0DCDC2]'>EXPLOR</span> </span> </h2>
         <p className='text-left  ' >Explore Beautiful Destination Around The World</p>
         <div>
-            <button className='btn bg-[#0DCDC2] mr-5 '>BOOK NOW</button>
+            <Link to='/allServices' > <button   className='btn bg-[#0DCDC2] mr-5 '>BOOK NOW</button> </Link>
+            
             
         </div>
       </div>
