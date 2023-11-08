@@ -53,8 +53,9 @@ const router = createBrowserRouter([
           element: <PrivetRouter><AddServices></AddServices></PrivetRouter>
         },
         {
-          path: '/updateServices',
-          element: <PrivetRouter><UpdateServices></UpdateServices></PrivetRouter>
+          path: '/updateServices/:id',
+          element: <PrivetRouter><UpdateServices></UpdateServices></PrivetRouter>,
+          loader : ({params}) => fetch(`http://localhost:5000/allServices/${params.id}`),
         },
         {
           path : "/ManageServicePage",

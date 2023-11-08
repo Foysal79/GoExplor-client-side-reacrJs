@@ -72,7 +72,7 @@ const ManageServicePageCard = ({service}) => {
                </div>
                <div className="flex space-x-8 " >
                  <button onClick={() => handelDelate(_id)}  className="btn flex-1  btn-primary bg-red-600 hover:bg-red-800 " >Delete</button> 
-                <Link to="/updateServices" className="btn flex-1  btn-primary"><button  >Update</button></Link> 
+                <Link to={`/updateServices/${_id}`} className="btn flex-1  btn-primary"><button  >Update</button></Link> 
                
                </div>
             </div>
