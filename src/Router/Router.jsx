@@ -10,6 +10,7 @@ import AddServices from "../Pages/AddServices/AddServices";
 import UpdateServices from "../Pages/UpdateServices/UpdateServices";
 import PrivetRouter from "./PrivetRouter";
 import PopularServices from "../LayOut/PopularServices/PopularServices";
+import SinglePage from "../Pages/SinglePage/SinglePage";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
           path : '/allServices',
           element : <AllServices></AllServices>,
           loader : () => fetch('http://localhost:5000/allServices')
+        },
+        {
+          path : '/singleService/:id',
+          element : <PrivetRouter><SinglePage></SinglePage></PrivetRouter>,
+          loader : ({params}) =>  fetch(`http://localhost:5000/allServices/${params.id}`),
+
         },
         {
           path: '/AddServices',

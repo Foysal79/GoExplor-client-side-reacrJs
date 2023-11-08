@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
 const PopularServicesCard = ({service}) => {
-    const {serviceName,
+    const {
+        _id,
+        serviceName,
         pictureURL,
         yourName,
         yourEmail,
@@ -9,6 +11,8 @@ const PopularServicesCard = ({service}) => {
         description,
         serviceArea,
         ServiceProviderImage} = service || {}
+
+        console.log(_id);
     return (
         
 <div className="w-full h-full max-w-sm bg-white border border-gray-300 shadow-xl rounded-lg  dark:bg-gray-800 dark:border-gray-700 border-b-8 border-b-[#3fdfd7]  hover:bg-[#baf0ed] ">
@@ -48,7 +52,8 @@ const PopularServicesCard = ({service}) => {
         </div>
         <div className="flex items-center justify-between mt-4 ">
             <span className="text-3xl font-bold text-gray-900 dark:text-white">${Price}</span>
-            <Link> <button className="bg-[#3fdfd7] btn btn-primary text-black hover:bg-[#3fdfd7] " >View Detail</button> </Link>
+            <Link to={`/singleService/${_id}`} > <button className="bg-[#3fdfd7] btn btn-primary text-black hover:bg-[#3fdfd7] " >View Detail</button>  </Link>
+            
         </div>
     </div>
 </div>
