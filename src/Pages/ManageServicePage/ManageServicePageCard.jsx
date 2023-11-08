@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const ManageServicePageCard = ({service}) => {
@@ -15,6 +16,39 @@ const ManageServicePageCard = ({service}) => {
 
         const handelDelate = _id => {
             console.log(_id);
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                
+                //    delate mongodb code this sessions
+
+                fetch(`http://localhost:5000/allServices/${_id}`, {
+                    method: 'DELETE',
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if(data.deletedCount > 0)
+                    {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                          });
+                    }
+                })
+
+
+                  
+                }
+              });
         }
 
 
@@ -37,7 +71,7 @@ const ManageServicePageCard = ({service}) => {
                 <h3 className="text-xl font-semibold" >   <span>{yourName}</span> </h3>
                </div>
                <div className="flex space-x-8 " >
-                 <button className="btn flex-1  btn-primary bg-red-600 hover:bg-red-800 " >Delete</button> 
+                 <button onClick={() => handelDelate(_id)}  className="btn flex-1  btn-primary bg-red-600 hover:bg-red-800 " >Delete</button> 
                 <Link to="/updateServices" className="btn flex-1  btn-primary"><button  >Update</button></Link> 
                
                </div>
