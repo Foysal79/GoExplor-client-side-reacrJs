@@ -19,7 +19,7 @@ const ServicesCard = ({service}) => {
                  <img className="w-96 h-full rounded-l-2xl " src={pictureURL} alt="" />
             </div>
             <div className="p-5 flex-1 space-y-4 ">
-               <h1 className="" > <span className="uppercase text-2xl font-bold " >tourist place :</span> <span className="text-gray-700 text-2xl font-semibold  " >{serviceName}</span> .</h1>
+               <h1 className="" > <span className=" text-2xl font-bold " >Tourist Place :</span> <span className="text-gray-700 text-2xl font-semibold  " >{serviceName}</span> .</h1>
                <p className="text-sm text-gray-600" >{description}</p>
                <h3> <span className="uppercase text-2xl font-bold" >Price : </span>  <span className="text-2xl font-semibold text-gray-700 " > {Price}</span> $</h3>
                <h4> <span className="text-xl font-bold" >Location :</span> <span className="text-gray-700 font-semibold text-lg" >{serviceArea} .</span></h4>

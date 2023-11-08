@@ -11,6 +11,7 @@ import UpdateServices from "../Pages/UpdateServices/UpdateServices";
 import PrivetRouter from "./PrivetRouter";
 import PopularServices from "../LayOut/PopularServices/PopularServices";
 import SinglePage from "../Pages/SinglePage/SinglePage";
+import BookingData from "../Pages/BookingData/BookingData";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,12 @@ const router = createBrowserRouter([
           path : '/allServices',
           element : <AllServices></AllServices>,
           loader : () => fetch('http://localhost:5000/allServices')
+        },
+        {
+          path: '/bopkingData',
+          element: <PrivetRouter><BookingData></BookingData></PrivetRouter>,
+          // loader : ({params}) => fetch(`http://localhost:5000/booking/${params.email}`)
+
         },
         {
           path : '/singleService/:id',

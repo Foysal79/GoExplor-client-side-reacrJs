@@ -2,12 +2,14 @@
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 
 const SinglePage = () => {
     const {user} = useContext(AuthContext);
     const singleService = useLoaderData();
-    const { _id,
+    const { 
         serviceName,
         pictureURL,
         yourName,
@@ -34,12 +36,22 @@ const SinglePage = () => {
                 ServiceProviderEmail,
                 serviceName,
                 pictureURL,
-                UserEmail,
+               email: UserEmail,
                 Price,
                 Date,
                 instruction
             }
             console.log(bookingService);
+
+            axios.post('http://localhost:5000/booking', bookingService )
+		.then(res => {
+			Swal.fire({
+                title: " Booking your service",
+                text: "thanks you ! ",
+                icon: "success",
+                confirmButtonText : 'ok',
+            })
+		})
             
 
 
