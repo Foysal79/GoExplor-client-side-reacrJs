@@ -24,24 +24,10 @@ const Navbar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><NavLink className="mr-4 md:text-xl" to='/' >Home</NavLink></li>
-        <li>
-          <a className="mr-4 md:text-xl " >Dashboard</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
+        
         <li><NavLink className="mr-4 md:text-xl " to='/allServices' >Services</NavLink></li>
-      </ul>
-    </div>
-    <Link to='/' ><a className=" btn  md:text-4xl font-bold ">Go<span className="text-[#0DCDC2]" >Explore</span> </a></Link>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-  <ul className="menu menu-horizontal px-1">
-  <li><NavLink className="mr-4 md:text-xl" to='/' >Home</NavLink></li>
-
-
-      <li>
+        <li><NavLink className="mr-4 md:text-xl " to='/ManageServicePage' >Manage Service</NavLink> </li>
+        <li>
         <details>
           <summary className="mr-4 md:text-xl " >Dashboard</summary>
           <ul className="p-2">
@@ -52,9 +38,34 @@ const Navbar = () => {
           </ul>
         </details>
       </li>
+      </ul>
+    </div>
+    <Link to='/' ><a className=" btn  md:text-4xl font-bold ">Go<span className="text-[#0DCDC2]" >Explore</span> </a></Link>
+  </div>
+  <div className="navbar-center hidden lg:flex">
+  <ul className="menu menu-horizontal px-1">
+  <li><NavLink className="mr-4 md:text-lg" to='/' >Home</NavLink></li>
 
 
-      <li><NavLink className="mr-4 md:text-xl " to='/allServices' >Services</NavLink></li>
+      
+
+
+      <li><NavLink className="mr-4 md:text-lg " to='/allServices' >Services</NavLink></li>
+      <li><NavLink className="mr-4 md:text-lg " to='/ManageServicePage' >Manage Service</NavLink> </li>
+       
+      <li>
+        <details>
+          <summary className="mr-4 md:text-lg " >Dashboard</summary>
+          <ul className="p-2">
+            
+            <li> <Link className="text-xl mb-2 p-2" to='/bopkingData' >My-services</Link> </li>
+            <li> <Link className="text-xl mb-2 p-2" to='/addServices' >Add-services</Link> </li>
+            <li> <Link className="text-xl p-2" to='/mySchedules' >My-schedules</Link> </li>
+          </ul>
+        </details>
+      </li>
+
+
     </ul>
   </div>
   <div className="navbar-end">

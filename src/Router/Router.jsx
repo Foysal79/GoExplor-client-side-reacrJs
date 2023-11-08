@@ -12,6 +12,7 @@ import PrivetRouter from "./PrivetRouter";
 import PopularServices from "../LayOut/PopularServices/PopularServices";
 import SinglePage from "../Pages/SinglePage/SinglePage";
 import BookingData from "../Pages/BookingData/BookingData";
+import ManageServicePage from "../Pages/ManageServicePage/ManageServicePage";
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         {
           path: '/updateServices',
           element: <PrivetRouter><UpdateServices></UpdateServices></PrivetRouter>
+        },
+        {
+          path : "/ManageServicePage",
+          element: <PrivetRouter><ManageServicePage></ManageServicePage></PrivetRouter>
         }
       ]
     },
