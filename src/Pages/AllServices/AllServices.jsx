@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ServicesCard from './ServicesCard';
+import { Helmet } from 'react-helmet-async';
 
 const AllServices = () => { 
     const [inputValue, setInputValue] = useState('');
@@ -65,6 +66,9 @@ const AllServices = () => {
 
     return (
         <div className='min-h-screen' >
+            <Helmet>
+                <title> GoExplor || all Services </title>
+               </Helmet>
             <h1 className='text-center text-5xl font-bold py-10' >All Services  </h1>
 
 

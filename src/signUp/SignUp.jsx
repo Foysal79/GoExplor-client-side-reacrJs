@@ -8,6 +8,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { useContext } from "react";
 import Footer from "../LayOut/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 // import app from '../Firebase/Firebase.config';
 
@@ -45,7 +46,13 @@ const SignUp = () => {
 	}
     return (
         <div className='' >
+			
 			<Toaster/>
+            <Helmet>
+        <title> GoExplor || signup </title>
+       </Helmet>
+
+
              <Navbar></Navbar>
             {/* SignUp Session */}
             <div className=' w-10/12 mx-auto lg:flex lg:justify-center lg:items-center lg:mt-5 ' >

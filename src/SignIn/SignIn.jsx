@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from '../LayOut/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const SignIn = () => {
 
@@ -43,6 +44,9 @@ const SignIn = () => {
     return (
         <div>
 			<Toaster/>
+			<Helmet>
+        <title> GoExplor || signIn </title>
+       </Helmet>
             <Navbar></Navbar>
             <div className=' w-10/12 mx-auto lg:flex lg:justify-center lg:items-center lg:mt-5 ' >
             <div className='flex-1 ' >

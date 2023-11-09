@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ManageServicePageCard from './ManageServicePageCard';
+import { Helmet } from 'react-helmet-async';
 
 const ManageServicePage = () => {
 
@@ -15,6 +16,10 @@ const ManageServicePage = () => {
 
     return (
         <div className='min-h-screen' >
+
+                <Helmet>
+                <title> GoExplor || Manage Page </title>
+               </Helmet>
 
             
                 <h1 className='text-center py-14 text-5xl font-bold' >Manage Services page </h1>

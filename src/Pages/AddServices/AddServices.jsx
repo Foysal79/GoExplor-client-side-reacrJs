@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const AddServices = () => {
@@ -53,6 +54,9 @@ const AddServices = () => {
 
     return (
         <div className="w-9/12 mx-auto" >
+			<Helmet>
+                <title> GoExplor || Add services </title>
+               </Helmet>
             
            <form onSubmit={handelAddServices} >
            

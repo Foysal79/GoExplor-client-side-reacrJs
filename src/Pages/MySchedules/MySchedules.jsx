@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import BookingData from "../BookingData/BookingData";
 import PendingWork from "../PendingWork/PendingWork";
 
@@ -5,6 +6,9 @@ import PendingWork from "../PendingWork/PendingWork";
 const MySchedules = () => {
     return (
         <div className="flex w-11/12 mx-auto justify-center min-h-screen gap-4 mt-20 " >
+            <Helmet>
+                <title> GoExplor || my Shedule </title>
+               </Helmet>
             <div className=" w-full flex-1 " >
                 
                 <BookingData></BookingData>

@@ -4,10 +4,15 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import RelaventData from './RelaventData';
 
 
 const SinglePage = () => {
     const {user} = useContext(AuthContext);
+    const [bookings, setBookings] = useState([]);
     const singleService = useLoaderData();
     const { 
         serviceName,
@@ -58,11 +63,27 @@ const SinglePage = () => {
         }
 
 
+     
+        const url = `http://localhost:5000/allServicesUserWise/${yourEmail}`;
+
+        
+    
+        useEffect(() => {
+            fetch(url)
+            .then(res => res.json())
+            .then(data => setBookings(data))
+        },[url])
+        console.log(bookings);
+
+
+
 
 
 
     return (
-        <div>
+        <div><Helmet>
+        <title> GoExplor || {serviceName} </title>
+       </Helmet>
 
             <div className='space-y-2 w-10/12 mx-auto mt-10 bg-[#56f7ef] py-6 rounded-2xl' >
                 <h1 className='text-2xl font-bold text-center ' >Service Provider</h1>
@@ -131,6 +152,17 @@ const SinglePage = () => {
             </div>
             </div>
             </div>
+
+            <h1 className='text-center text-5xl font-bold my-20' >Some Related Data for You </h1>
+           
+           <div className='w-10/12 mx-auto grid grid-cols-3 gap-10' >
+            
+              {
+                bookings.map(service => <RelaventData key={service._id} service={service} ></RelaventData> )
+              }
+            
+           </div>
+
         </div>
     );
 };

@@ -5,12 +5,18 @@ import Testimonial from "../../LayOut/Testimonial/Testimonial";
 import WhyTravelWithUs from "../../LayOut/WhyTravelWithUs/WhyTravelWithUs";
 import PhotoTravelers from "../../LayOut/PhotoTeavellers/PhotoTravelers";
 import Partners from "../../LayOut/Partners/Partners";
+import { Helmet } from "react-helmet-async";
 
 
 
 const Home = () => {
     return (
         <div>
+
+               <Helmet>
+                <title> GoExplor || Home </title>
+               </Helmet>
+
             <Banner></Banner>
             <WhyTravelWithUs></WhyTravelWithUs>
               <PopularServices></PopularServices>
