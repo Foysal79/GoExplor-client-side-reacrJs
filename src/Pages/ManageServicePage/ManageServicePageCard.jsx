@@ -29,7 +29,7 @@ const ManageServicePageCard = ({service}) => {
                 
                 //    delate mongodb code this sessions
 
-                fetch(`http://localhost:5000/allServices/${_id}`, {
+                fetch(`https://go-explor-server-site.vercel.app/allServices/${_id}`, {
                     method: 'DELETE',
                 })
                 .then(res => res.json())

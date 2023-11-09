@@ -12,7 +12,7 @@ const MyServices = () => {
 
     
 
-    const url = `http://localhost:5000/allServicesUserWise/${user.email}`;
+    const url = `https://go-explor-server-site.vercel.app/allServicesUserWise/${user.email}`;
 
     const [data, setData] = useState([]);
 
@@ -31,6 +31,10 @@ const MyServices = () => {
                 <title> GoExplor || My services </title>
                </Helmet>
             <h1 className="text-center text-5xl font-bold mb-10 " > My Services  </h1>
+
+            {
+                data.length ? "" : <div className="flex justify-center" > <img src="https://i.ibb.co/WxTFccL/1.jpg" alt="" />  </div>
+            }
 
             <div className="w-11/12  items-center mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:pl-28 gap-6 space-y-10" >
                 

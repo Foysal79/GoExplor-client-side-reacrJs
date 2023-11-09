@@ -7,7 +7,7 @@ const PopularServices = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allServices")
+        fetch("https://go-explor-server-site.vercel.app/allServices")
         .then(res => res.json())
         .then(data => setData(data))
     },[])

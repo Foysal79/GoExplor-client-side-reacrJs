@@ -9,7 +9,10 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useContext } from "react";
 import Footer from "../LayOut/Footer/Footer";
 import { Helmet } from "react-helmet-async";
-
+import Swal from "sweetalert2";
+import { getAuth, updateProfile } from "firebase/auth";
+import app from "../Firebase/Firebase.config";
+const auth = getAuth(app);
 // import app from '../Firebase/Firebase.config';
 
 
@@ -28,10 +31,51 @@ const SignUp = () => {
         const password = e.target.password.value; 
 
 		console.log(name, img, email, password);
+
+		if(password.length < 6)
+        {
+          toast.error("your password should have at lest 6 character");
+          return;
+
+        }
+        else if(!/[A-Z]/.test(password))
+        {
+          toast.error("your password should have at lest one uppercase");
+          return;
+        }
+        else if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{6,})/.test(password))
+        {
+          toast.error("your password should have at lest one spacial character");
+          return;
+        }
+
+
+
 		createUser(email, password)
 		.then(result => {
-           toast.success('Wow Successfully Registration')
+        //    toast.success('Wow Successfully Registration')
             console.log(result.user);
+            
+			Swal.fire({
+				title: "Wow Successfully Registration",
+				text: "You clicked the button!",
+				icon: "success"
+		});
+
+			updateProfile(auth.currentUser, {
+				displayName: name,
+				photoURL: img
+			})
+			.then(result => {
+				console.log(result.user);
+			})
+	
+
+
+
+
+
+			
 			
            
             

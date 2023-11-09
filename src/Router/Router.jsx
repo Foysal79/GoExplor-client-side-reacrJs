@@ -30,24 +30,24 @@ const router = createBrowserRouter([
         {
            path : '/popularDestination',
            element : <PopularServices></PopularServices>,
-           loader : () => fetch("http://localhost:5000/allServices")
+           loader : () => fetch("https://go-explor-server-site.vercel.app/allServices")
            
         },
         {
           path : '/allServices',
           element : <AllServices></AllServices>,
-          loader : () => fetch('http://localhost:5000/allServices')
+          loader : () => fetch('https://go-explor-server-site.vercel.app/allServices')
         },
         {
           path: '/bopkingData',
           element: <PrivetRouter><BookingData></BookingData></PrivetRouter>,
-          // loader : ({params}) => fetch(`http://localhost:5000/booking/${params.email}`)
+          // loader : ({params}) => fetch(`https://go-explor-server-site.vercel.app/booking/${params.email}`)
 
         },
         {
           path : '/singleService/:id',
           element : <PrivetRouter><SinglePage></SinglePage></PrivetRouter>,
-          loader : ({params}) =>  fetch(`http://localhost:5000/allServices/${params.id}`),
+          loader : ({params}) =>  fetch(`https://go-explor-server-site.vercel.app/allServices/${params.id}`),
 
         },
         {
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         {
           path: '/updateServices/:id',
           element: <PrivetRouter><UpdateServices></UpdateServices></PrivetRouter>,
-          loader : ({params}) => fetch(`http://localhost:5000/allServices/${params.id}`),
+          loader : ({params}) => fetch(`https://go-explor-server-site.vercel.app/allServices/${params.id}`),
         },
         {
           path : "/ManageServicePage",

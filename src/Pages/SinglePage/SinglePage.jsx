@@ -48,7 +48,7 @@ const SinglePage = () => {
             }
             console.log(bookingService);
 
-            axios.post('http://localhost:5000/booking', bookingService )
+            axios.post('https://go-explor-server-site.vercel.app/booking', bookingService )
 		.then(res => {
 			Swal.fire({
                 title: " Booking your service",
@@ -64,7 +64,7 @@ const SinglePage = () => {
 
 
      
-        const url = `http://localhost:5000/allServicesUserWise/${yourEmail}`;
+        const url = `https://go-explor-server-site.vercel.app/allServicesUserWise/${yourEmail}`;
 
         
     

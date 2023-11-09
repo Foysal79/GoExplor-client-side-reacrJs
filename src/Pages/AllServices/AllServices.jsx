@@ -20,6 +20,27 @@ const AllServices = () => {
 
           console.log(serviceName);
 
+
+
+
+
+            //     console.log(inputValue);
+
+    //       console.log(serviceName);
+
+    //       const url = `https://go-explor-server-site.vercel.app/allServices/${inputValue}`;
+    //          axios.get(url)
+    //         .then(data => setDisplay(data.data))
+        
+    //     console.log(display);
+
+
+
+
+
+
+
+
         if(inputValue === "Sundarbans Mangrove Forest, Bangladesh")
         {
             const filterData = services.filter(filterCard => filterCard.serviceName === "Sundarbans Mangrove Forest, Bangladesh" );
@@ -53,6 +74,12 @@ const AllServices = () => {
         if(inputValue === "Goa's Beaches, India")
         {
             const filterData = services.filter(filterCard => filterCard.serviceName === "Goa's Beaches, India" );
+            console.log(filterData);
+            setDisplay(filterData);
+        }
+        if(inputValue === "Varanasi Ghats, India")
+        {
+            const filterData = services.filter(filterCard => filterCard.serviceName === "Varanasi Ghats, India" );
             console.log(filterData);
             setDisplay(filterData);
         }

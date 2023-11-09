@@ -33,7 +33,7 @@ const AddServices = () => {
 			ServiceProviderImage
 		}
 		
-		axios.post('http://localhost:5000/allServices', services )
+		axios.post('https://go-explor-server-site.vercel.app/allServices', services )
 		.then(res => {
 			Swal.fire({
                 title: "Your Service Add",

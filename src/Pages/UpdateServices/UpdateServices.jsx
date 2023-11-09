@@ -39,7 +39,7 @@ const UpdateServices = () => {
 		console.log(updateServices);
 
 
-		fetch(`http://localhost:5000/allServices/${_id}`, {
+		fetch(`https://go-explor-server-site.vercel.app/allServices/${_id}`, {
 			method: "PUT",
             headers:{
                 "content-type": "application/json"

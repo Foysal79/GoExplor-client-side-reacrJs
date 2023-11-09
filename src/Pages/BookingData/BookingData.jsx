@@ -9,9 +9,9 @@ import PandingWorkCard from "./PandingWorkCard";
 const BookingData = () => {
     const {user} = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
-    // const url = `http://localhost:5000/booking?email=${user.email}`;
-    const url = `http://localhost:5000/bookings?gmail=${user.email}`;
-    const url2 = `http://localhost:5000/bookings?email=${user.email}`;
+    // const url = `https://go-explor-server-site.vercel.app/booking?email=${user.email}`;
+    const url = `https://go-explor-server-site.vercel.app/bookings?gmail=${user.email}`;
+    const url2 = `https://go-explor-server-site.vercel.app/bookings?email=${user.email}`;
 
     console.log("url : = ",url);
 
@@ -26,15 +26,25 @@ const BookingData = () => {
 
     return (
         <div className="min-h-screen" >
+
+
+          
           
 
           <div className="flex gap-8 " >
           <div className="w-full space-y-6 flex-1" >
           <h1 className="text-5xl font-bold flex-1 text-center mb-10 " >booking</h1>
+          
+
+          
             {
                 bookings.map(card =>  <BookingCard key={card._id} card={card} ></BookingCard>)
             }
           </div>
+
+          
+
+          
 
           
 

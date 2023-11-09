@@ -9,7 +9,7 @@ const PendingWork = () => {
 
     const [booking, setBooking] = useState([]);
 
-    const url = "http://localhost:5000/bookingsAllData";
+    const url = "https://go-explor-server-site.vercel.app/bookingsAllData";
     useEffect(() => { 
         fetch(url)
         .then(res => res.json())
@@ -20,7 +20,7 @@ const PendingWork = () => {
       console.log(booking);
 
       const handelConfirm = id => {
-        fetch(`http://localhost:5000/bookingsAllData/${id}`, {
+        fetch(`https://go-explor-server-site.vercel.app/bookingsAllData/${id}`, {
            method : "PATCH",
            headers : {
                'content-type' : 'application/json',
