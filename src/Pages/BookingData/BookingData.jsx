@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import axios from "axios";
 import BookingCard from "./BookingCard";
+import PandingWorkCard from "./PandingWorkCard";
 
 
 
@@ -27,11 +28,18 @@ const BookingData = () => {
         <div className="min-h-screen" >
           
 
-          <div className="w-full space-y-6 mt-20" >
+          <div className="flex gap-8 " >
+          <div className="w-full space-y-6 flex-1" >
+          <h1 className="text-5xl font-bold flex-1 text-center mb-10 " >booking</h1>
             {
                 bookings.map(card =>  <BookingCard key={card._id} card={card} ></BookingCard>)
             }
           </div>
+
+          
+
+          </div>
+          
 
             
         </div>
