@@ -13,6 +13,8 @@ import PopularServices from "../LayOut/PopularServices/PopularServices";
 import SinglePage from "../Pages/SinglePage/SinglePage";
 import BookingData from "../Pages/BookingData/BookingData";
 import ManageServicePage from "../Pages/ManageServicePage/ManageServicePage";
+import MySchedules from "../Pages/MySchedules/MySchedules";
+import MyServices from "../Pages/MyServices/MyServices";
 
 
 const router = createBrowserRouter([
@@ -60,6 +62,14 @@ const router = createBrowserRouter([
         {
           path : "/ManageServicePage",
           element: <PrivetRouter><ManageServicePage></ManageServicePage></PrivetRouter>
+        },
+        {
+          path : "/mySchedules",
+          element : <PrivetRouter><MySchedules></MySchedules></PrivetRouter>
+        },
+        {
+          path : "/my-services",
+          element : <PrivetRouter><MyServices></MyServices></PrivetRouter>
         }
       ]
     },

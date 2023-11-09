@@ -74,7 +74,7 @@ const AllServices = () => {
                   onChange={handelInput}
                   type="search"
                   id="search-dropdown text-input"
-                  className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-black border-l-1 border border-black   dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                  className="block border-4 border-[#86f0ea]  p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-black border-l-1   dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Search here......."
                   required
                 />

@@ -32,7 +32,7 @@ const Navbar = () => {
           <summary className="mr-4 md:text-xl " >Dashboard</summary>
           <ul className="p-2">
             
-            <li> <Link className="text-xl mb-2 p-2" to='/bopkingData' >My-services</Link> </li>
+            <li> <Link className="text-xl mb-2 p-2" to='/my-services' >My-services</Link> </li>
             <li> <Link className="text-xl mb-2 p-2" to='/addServices' >Add-services</Link> </li>
             <li> <Link className="text-xl p-2" to='/mySchedules' >My-schedules</Link> </li>
           </ul>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <summary className="mr-4 md:text-lg " >Dashboard</summary>
           <ul className="p-2">
             
-            <li> <Link className="text-xl mb-2 p-2" to='/bopkingData' >My-services</Link> </li>
+            <li> <Link className="text-xl mb-2 p-2" to='/my-services' >My-services</Link> </li>
             <li> <Link className="text-xl mb-2 p-2" to='/addServices' >Add-services</Link> </li>
             <li> <Link className="text-xl p-2" to='/mySchedules' >My-schedules</Link> </li>
           </ul>

@@ -25,9 +25,9 @@ const BookingData = () => {
 
     return (
         <div className="min-h-screen" >
-          <h1 className="text-5xl font-bold text-center" >Booking Your Services {bookings.length} </h1>
+          
 
-          <div>
+          <div className="w-full space-y-6 mt-20" >
             {
                 bookings.map(card =>  <BookingCard key={card._id} card={card} ></BookingCard>)
             }

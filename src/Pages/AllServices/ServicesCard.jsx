@@ -6,7 +6,7 @@ const ServicesCard = ({service}) => {
         serviceName,
         pictureURL,
         yourName,
-        yourEmail,
+        email,
         Price,
         description,
         serviceArea,
