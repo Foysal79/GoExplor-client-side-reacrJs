@@ -1,8 +1,43 @@
-# React + Vite
+### Website Name : GoExplor 
+# Website Live Side : https://goexplor-e8ca8.web.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GoExplor website features:
 
-Currently, two official plugins are available:
+# 
+- for your beautiful holidays for beautiful destination and popular holyday . 
+- Login & Registration systems using firebase .
+- All Services Page implement search functionality by the service name .
+- if user is login user , he or she can add any travel service . 
+- if user is login user, user can delete and update any of its services ( only for own service ) .
+- if user service booking any services,  the user will be shown Popup form and customize our tour date and instruction note
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## using technology : 
+# Frontend
+- HTML .
+- CSS .
+- framework css tailwind .
+- tailwind library daisyui .
+- tailwind library flowbite .
+- tailwind library Mamba UI .
+- tailwind library Preline .
+- JavaScript .
+- Firebase .
+- React js .
+- React-router .
+- react-helmet .
+- react-hot-toast .
+- sweetalert2 .
+- react-simple-typewriter .
+- react-marquee-slider .
+-  Lottie-react.
+
+
+# Backend
+- javascript .
+- dotnet.
+- node js.
+- Express js .
+- MongoDB .
+
+
+
